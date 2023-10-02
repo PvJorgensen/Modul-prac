@@ -1,9 +1,7 @@
-
-
+import { getAllUsers as showUsers } from "./modules/view/userViews.js";
 //Globals ----------------------------------------------------------------
-let myApp = document.getElementById('myApp');
 
-//fetch ------------------------------------------------------------------
+//fetch users model kode -------------------------------------------------
 fetchUser();
 
 function fetchUser() {
@@ -29,7 +27,7 @@ fetch('https://dummyjson.com/users?limit=0')
     });
 }
 
-
+// view kode --------------------------------
 function recivedUsers(myUsers) {
-    console.log(myUsers);
+    showUsers(myUsers, 'app', false);
 }
